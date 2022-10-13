@@ -1,0 +1,22 @@
+html,
+
+body,
+
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 95%;
+    width: 95%;
+    margin-left: 2.5%;
+}
+input {
+    margin-left: 22.5%;
+    margin-bottom: 75px;
+    margin-top: 50px;
+
+}
+button {
+    display: block;
+    margin-left: 47%;
+    margin-bottom: 10px;
+}
