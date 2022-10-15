@@ -18,7 +18,7 @@ require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/l
       let get1 = document.getElementById("input1").value;
       const text1 = get1.replace(" ", "%20")
 	    const text2 = document.getElementById("input2").value;
-
+      // Grabs input from HTML
       function plotPoints(obj){
         for (let i = 0; i < obj.data.home_search.count; i++) {
           const lat = obj.data.home_search.results[i].location.address.coordinate.lat;
@@ -33,6 +33,8 @@ require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/l
           else {
             var desc = obj.data.home_search.results[i].primary_photo.href;
           }
+          // Parsing info from API call
+
           const point = { //Create a point
             type: "point",
             longitude: long,
@@ -54,6 +56,7 @@ require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/l
             Name: name,
             Description: desc
           }
+          // Creating a popup
           const pointGraphic = new Graphic({
             geometry: point,
             symbol: simpleMarkerSymbol,
@@ -81,6 +84,5 @@ require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/l
     
     document.getElementById("thing").addEventListener("click", getArea);
     document.getElementById("input2").addEventListener("onsubmit", getArea);
-    
-    //var response = String(jsonString);
+    // Adding the enter button functionality
 });
