@@ -76,7 +76,7 @@ require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/l
       };
       // Include get from HTML and paste into variables.
       // Concat variables into url in proper place
-      fetch('https://us-real-estate.p.rapidapi.com/v2/for-sale?offset=0&limit=42&state_code=' + text2 + '&city=' + text1 + '&sort=newest', options)
+      fetch('https://us-real-estate.p.rappppppidapi.com/v2/for-sale?offset=0&limit=42&state_code=' + text2 + '&city=' + text1 + '&sort=newest', options)
         .then(response => response.json())
         .then(response => plotPoints(response))
         .catch(err => console.error(err));
